@@ -60,11 +60,11 @@ def obter_usuario_github(nome_usuario: str) -> UsuarioGithub:
         dados_usuario = resposta.json()
 
         # Extraindo os dados necessários da resposta
-        nome = dados_usuario.get("name")
-        url_perfil = dados_usuario.get("html_url")
-        repositorios_publicos = dados_usuario.get("public_repos")
-        seguidores = dados_usuario.get("followers")
-        seguindo = dados_usuario.get("following")
+        nome = dados_usuario.get("nome")
+        url_perfil = dados_usuario.get("url_perfil")
+        repositorios_publicos = dados_usuario.get("repositorios_publicos")
+        seguidores = dados_usuario.get("seguidores")
+        seguindo = dados_usuario.get("seguindo")
 
         # Criando um objeto UsuarioGithub com os dados extraídos
         usuario_github = UsuarioGithub(nome, url_perfil, repositorios_publicos, seguidores, seguindo)
